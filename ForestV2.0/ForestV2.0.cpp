@@ -5,9 +5,12 @@ using namespace std;
 #include "Forest.h"
 #include"Shape.h"
 #include"Rectangle.h"
+#include "Triangle.h"
+#include "_Tree.h"
+
 
 int Tree::counter = 0; // liczba drzew
-int Shape::counter = 0; // liczba shapow
+int Shape::counter = 0; // liczba objektow
 
 int main() {
     // Add Tree Function - y, x, h-height, s-symbol, c-color)
@@ -18,12 +21,20 @@ int main() {
 
     //las.printTab();
 
-    Rectangle p(5, 7, '*', "green");
-    Rectangle k(5, '*', "green");
+    Rectangle p(5, 8, '*', "green");
+    Rectangle k(2, '*', "green");
+    Triangle t(15, '*', "red");
+    _Tree d(3, '#', "green");
+
+
 
     p.Print();
     cout << endl;
     k.Print();
+    cout << endl;
+    t.Print();
+    cout << endl;
+    d.Print();
     cout << endl;
 
 

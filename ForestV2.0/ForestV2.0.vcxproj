@@ -132,12 +132,16 @@
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Shape.cpp" />
     <ClCompile Include="Tree.cpp" />
+    <ClCompile Include="Triangle.cpp" />
+    <ClCompile Include="_Tree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Forest.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Shape.h" />
     <ClInclude Include="Tree.h" />
+    <ClInclude Include="Triangle.h" />
+    <ClInclude Include="_Tree.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
