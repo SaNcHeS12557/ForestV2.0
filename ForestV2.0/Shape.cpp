@@ -25,14 +25,12 @@ void Shape::Print() {
 }
 //
 
-// konstruktor shape
+// Konstruktor Shape z parametrami
 Shape::Shape(int h, char s, string c) {
 	int i, j;
 	height = h;
 	width = 1;
 	symbol = s;
-
-	cout << "Konstruktor Shape z parametrami\n";
 
 	if (c == "green")
 		color = "\033[1;32m";
@@ -59,16 +57,14 @@ void Shape::Alloc() {
 }
 //
 
-// tree Destructor
+// shape Destructor
 Shape::~Shape() {
 	int j;
 	counter--;
-	cout << "Kasuje shape\nZostalo: " << counter << "\n";
+	cout << "Destruktor shape: kasuje shape\nZostalo: " << counter << "\n";
 	for (j = 0; j < height; j++)
 		delete tab[j];
 	delete tab;
-
-	cout << "Destruktor shape\n";
 
 }
 //

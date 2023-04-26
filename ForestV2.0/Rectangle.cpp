@@ -3,21 +3,28 @@
 using namespace std;
 #include "Rectangle.h"
 
+
+// Konstruktor rectangle z parametrami
 Rectangle::Rectangle(int h, int w, char s, string c):Shape(h, s, c) {
-	cout << "Konstruktor rectangle z parametrami\n";
 	width = w;
 	Alloc();
 	Fill();
 
 }
+//
 
+
+
+// Konstruktor rectangle z parametrami bez h czyli square
 Rectangle::Rectangle(int h, char s, string c) :Shape(h, s, c) {
-	cout << "Konstruktor rectangle z parametrami bez h czyli square\n";
 	width = h;
 	Alloc();
 	Fill();
 
 }
+//
+
+
 
 void Rectangle::Fill() {
 	int i, j;

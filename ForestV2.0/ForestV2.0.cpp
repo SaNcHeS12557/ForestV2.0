@@ -18,8 +18,6 @@ int main() {
 
     //las.printTab();
 
-    int i, j;
-
     Rectangle p(5, 7, '*', "green");
     Rectangle k(5, '*', "green");
 
