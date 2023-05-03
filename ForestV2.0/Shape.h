@@ -15,6 +15,7 @@ public:
 	virtual void Fill() = 0;
 	Shape(int h, char s, string c);
 	~Shape();
+	Shape* setXY(int x, int y);
 	friend class Forest;
 };
 

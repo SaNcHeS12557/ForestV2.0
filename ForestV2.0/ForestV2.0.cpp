@@ -7,9 +7,10 @@ using namespace std;
 #include"Rectangle.h"
 #include "Triangle.h"
 #include "_Tree.h"
+#include "Border.h"
+#include "Trapeze.h"
 
-
-int Tree::counter = 0; // liczba drzew
+//int Tree::counter = 0; // liczba drzew
 int Shape::counter = 0; // liczba objektow
 
 int main() {
@@ -21,21 +22,17 @@ int main() {
 
     //las.printTab();
 
-    Rectangle p(5, 8, '*', "green");
-    Rectangle k(2, '*', "green");
-    Triangle t(15, '*', "red");
-    _Tree d(3, '#', "green");
+    Forest las;
+    Rectangle* p = new Rectangle(5, 7, '*', "green");
+    Rectangle* k = new Rectangle(5, '*', "green");
 
+    Border* b = new Border(*p, 1);
+    Tree* c = new Tree(5, '*', "red");
 
+    las.AddShape(p, 2, 2);
+    las.AddShape(k, 7, 20);
+    las.AddShape(b, 3, 40);
 
-    p.Print();
-    cout << endl;
-    k.Print();
-    cout << endl;
-    t.Print();
-    cout << endl;
-    d.Print();
-    cout << endl;
-
-
+    c->setXY(33, 4);
+    las += c;
 }

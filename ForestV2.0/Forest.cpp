@@ -5,16 +5,12 @@ using namespace std;
 
 #include "Forest.h"
 
-Forest::Forest()
+Forest::Forest(int width, int height) : tabX(width), tabY(height)
 {
     int i;
-
-    tabY = 25;
-    tabX = 100;
     tab = new int* [tabY];
     for (i = 0; i < tabY; i++)
         tab[i] = new int[tabX];
-
 }
 
 Forest::~Forest()
@@ -54,18 +50,38 @@ void Forest::printTab()
 }
 
 
-void Forest::AddTree(int x, int y, int h, char s, string color) {
-    int i, j;
-    Tree* t = new Tree(h, s, color);
-    trees.push_back(t);
+//void Forest::AddTree(int x, int y, int h, char s, string color) {
+//    int i, j;
+//    Tree* t = new Tree(h, s, color);
+//    trees.push_back(t);
+//
+//    for (i = 0; i < t->height; i++) {
+//        for (j = 0; j < t->getWidth(); j++) {
+//            if ((i + x) < tabY && (j + y) < tabX) { // jezeli
+//                if (t->tab[i][j]) {
+//                    tab[i + x][j + y] = trees.size();
+//                }
+//            }
+//        }
+//    }
+//}
+Forest& Forest::operator+=(Shape* sh) {
+    this->AddShape(sh, sh->y, sh->x);
+    return *this;
 
-    for (i = 0; i < t->height; i++) {
-        for (j = 0; j < t->getWidth(); j++) {
-            if ((i + x) < tabY && (j + y) < tabX) { // jezeli
-                if (t->tab[i][j]) {
-                    tab[i + x][j + y] = trees.size();
-                }
-            }
+}
+
+void Forest::AddShape(Shape* sh, int y, int x) {
+    int i, j;
+    sh->x = x;
+    sh->y = y;
+
+    trees.push_back(sh);
+
+    for (j = 0; j < sh->height; j++) {
+        for (i = 0; i < sh->width; i++) {
+            if (sh->tab[j][i])
+                tab[j + y][i + x] = sh->tab[j][i] * trees.size();
         }
     }
 }

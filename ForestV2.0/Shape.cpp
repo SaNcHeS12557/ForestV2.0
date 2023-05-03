@@ -34,7 +34,7 @@ Shape::Shape(int h, char s, string c) {
 
 	if (c == "green")
 		color = "\033[1;32m";
-	if (c == "red") 
+	if (c == "red")
 		color = "\033[1;31m";
 	if (c == "yellow")
 		color = "\033[1;33m";
@@ -51,7 +51,7 @@ void Shape::Alloc() {
 	for (j = 0; j < height; j++) {
 		tab[j] = new int[width];
 		for (i = 0; i < width; i++)
-			tab[j][i]=0;
+			tab[j][i] = 0;
 	}
 
 }
@@ -68,3 +68,9 @@ Shape::~Shape() {
 
 }
 //
+
+Shape* Shape::setXY(int x, int y) {
+	this->x = x;
+	this->y = y;
+	return this;
+}

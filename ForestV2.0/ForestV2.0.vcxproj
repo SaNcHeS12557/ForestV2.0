@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Border.cpp" />
     <ClCompile Include="Forest.cpp" />
     <ClCompile Include="ForestV2.0.cpp" />
     <ClCompile Include="Rectangle.cpp" />
@@ -136,6 +137,7 @@
     <ClCompile Include="_Tree.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Border.h" />
     <ClInclude Include="Forest.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Shape.h" />

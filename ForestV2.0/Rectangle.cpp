@@ -24,6 +24,12 @@ Rectangle::Rectangle(int h, char s, string c) :Shape(h, s, c) {
 }
 //
 
+Rectangle::Rectangle(Rectangle& p):Shape(p.height, p.symbol, p.colorName) {
+	width = p.width;
+	Alloc();
+	Fill();
+
+}
 
 
 void Rectangle::Fill() {

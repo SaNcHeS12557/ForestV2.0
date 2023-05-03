@@ -6,7 +6,7 @@ Triangle::Triangle(int h, char s, string c) :Shape(h, s, c) {
 	width = h;
 	Alloc();
 	Fill();
-} 
+}
 
 void Triangle::Fill() {
 	int i, j;
