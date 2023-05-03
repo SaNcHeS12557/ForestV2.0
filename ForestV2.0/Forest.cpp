@@ -5,12 +5,16 @@ using namespace std;
 
 #include "Forest.h"
 
-Forest::Forest(int width, int height) : tabX(width), tabY(height)
+Forest::Forest(int y, int x)
 {
     int i;
+
+    tabY = y;
+    tabX = x;
     tab = new int* [tabY];
     for (i = 0; i < tabY; i++)
         tab[i] = new int[tabX];
+
 }
 
 Forest::~Forest()

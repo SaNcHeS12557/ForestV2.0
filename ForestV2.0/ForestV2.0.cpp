@@ -22,7 +22,7 @@ int main() {
 
     //las.printTab();
 
-    Forest las;
+    Forest las = Forest(15, 60);
     Rectangle* p = new Rectangle(5, 7, '*', "green");
     Rectangle* k = new Rectangle(5, '*', "green");
 
