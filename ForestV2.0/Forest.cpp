@@ -65,6 +65,7 @@ void Forest::printTab()
 //        }
 //    }
 //}
+
 Forest& Forest::operator+=(Shape* sh) {
     this->AddShape(sh, sh->y, sh->x);
     return *this;

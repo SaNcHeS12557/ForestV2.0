@@ -132,6 +132,7 @@
     <ClCompile Include="ForestV2.0.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Shape.cpp" />
+    <ClCompile Include="Trapeze.cpp" />
     <ClCompile Include="Tree.cpp" />
     <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="_Tree.cpp" />
@@ -141,6 +142,7 @@
     <ClInclude Include="Forest.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Shape.h" />
+    <ClInclude Include="Trapeze.h" />
     <ClInclude Include="Tree.h" />
     <ClInclude Include="Triangle.h" />
     <ClInclude Include="_Tree.h" />

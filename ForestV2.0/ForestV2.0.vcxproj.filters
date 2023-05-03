@@ -39,6 +39,9 @@
     <ClCompile Include="Border.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Trapeze.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Forest.h">
@@ -60,6 +63,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Border.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Trapeze.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

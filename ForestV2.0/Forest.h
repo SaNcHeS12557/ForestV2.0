@@ -10,7 +10,7 @@ private:
     vector<Shape*>trees;
 
 public:
-
+    Forest();
     Forest(int width, int height);
     ~Forest();
 
