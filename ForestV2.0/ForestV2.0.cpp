@@ -27,7 +27,7 @@ int main() {
     Rectangle* k = new Rectangle(5, '*', "green");
 
     Border* b = new Border(*p, 1);
-    Shape* c = new Tree(5, '*', "red");
+    Tree* c = new Tree(5, '*', "red");
 
     las.AddShape(p, 2, 2);
     las.AddShape(k, 7, 20);
