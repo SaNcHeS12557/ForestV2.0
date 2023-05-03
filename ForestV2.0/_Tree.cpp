@@ -6,6 +6,7 @@ _Tree::_Tree(int h, char s, string c) :Shape(h, s, c) {
 	width = 2 * h - 1;
 	Alloc();
 	Fill();
+
 }
 
 void _Tree::Fill() {
