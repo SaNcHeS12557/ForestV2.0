@@ -51,5 +51,18 @@ int main() {
     drawTree(15, 70, las);
     //
 
+    //Triangle* t1 = new Triangle(5, '*', "red", RT);
+    //t1->setXY(5, 5);
+    //las += t1;
+    //Triangle* t2 = new Triangle(5, '*', "red", LT);
+    //t2->setXY(10, 5);
+    //las += t2;
+    //Triangle* t3 = new Triangle(5, '*', "red", RB);
+    //t3->setXY(15, 5);
+    //las += t3;
+    //Triangle* t4 = new Triangle(5, '*', "red", LB);
+    //t4->setXY(20, 5);
+    //las += t4;
+
     las.printTab();
 }
