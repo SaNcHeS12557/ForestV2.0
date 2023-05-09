@@ -11,7 +11,7 @@ void Shape::Print() {
 
 	for (j = 0; j < height; j++) {
 		for (i = 0; i < width; i++)
-			if (tab[j][i]) {
+			if (tab[j][i] == 1) {
 				cout << color;
 				cout << symbol;
 			}
@@ -32,10 +32,10 @@ Shape::Shape(int h, char s, string c) {
 	width = 1;
 	symbol = s;
 
-	if (c == "green")
-		color = "\033[1;32m";
 	if (c == "red")
 		color = "\033[1;31m";
+	if (c == "green")
+		color = "\033[1;32m";
 	if (c == "yellow")
 		color = "\033[1;33m";
 
@@ -53,7 +53,6 @@ void Shape::Alloc() {
 		for (i = 0; i < width; i++)
 			tab[j][i] = 0;
 	}
-
 }
 //
 

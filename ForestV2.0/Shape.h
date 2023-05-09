@@ -6,6 +6,7 @@ protected:
 	int height;
 	char symbol;
 	string color;
+	string colorname;
 	int** tab;
 	int x, y;
 public:

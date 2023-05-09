@@ -2,7 +2,7 @@
 using namespace std;
 #include "_Tree.h"
 
-_Tree::_Tree(int h, char s, string c) :Shape(h, s, c) {
+_Tree::_Tree(int h, char s, string c) : Shape(h, s, c) {
 	width = 2 * h - 1;
 	Alloc();
 	Fill();

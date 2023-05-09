@@ -5,18 +5,17 @@ using namespace std;
 
 
 // Konstruktor rectangle z parametrami
-Rectangle::Rectangle(int h, int w, char s, string c) :Shape(h, s, c) {
+Rectangle::Rectangle(int h, int w, char s, string c) : Shape(h, s, c) {
 	width = w;
-	Alloc();
+	Alloc(); // teraz bo nie znalismy width
 	Fill();
 
 }
 //
 
 
-
 // Konstruktor rectangle z parametrami bez h czyli square
-Rectangle::Rectangle(int h, char s, string c) :Shape(h, s, c) {
+Rectangle::Rectangle(int h, char s, string c) : Shape(h, s, c) {
 	width = h;
 	Alloc();
 	Fill();
@@ -24,6 +23,14 @@ Rectangle::Rectangle(int h, char s, string c) :Shape(h, s, c) {
 }
 //
 
+
+// Konstruktor rectangle kopiujacy
+Rectangle::Rectangle(Rectangle& p) : Shape(p.height, p.symbol, p.colorname) {
+	width = p.width;
+	Alloc();
+	Fill();
+}
+//
 
 
 void Rectangle::Fill() {

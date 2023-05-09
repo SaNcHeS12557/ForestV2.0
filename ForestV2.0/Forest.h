@@ -1,13 +1,13 @@
-#include "Tree.h"
+#include "_Tree.h"
 #include"Shape.h"
 
+using namespace std;
 
 class Forest {
 private:
     int** tab;
     int tabX, tabY;
-    //vector<Tree*> trees;
-    vector<Shape*>trees;
+    vector<Shape*>shapes;
 
 public:
     Forest(int y, int x);

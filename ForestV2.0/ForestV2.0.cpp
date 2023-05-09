@@ -10,7 +10,7 @@ using namespace std;
 #include "Border.h"
 #include "Trapeze.h"
 
-int Tree::counter = 0; // liczba drzew
+//int Tree::counter = 0; // liczba drzew
 int Shape::counter = 0; // liczba objektow
 
 int main() {
@@ -21,18 +21,20 @@ int main() {
     //las.AddTree(7, 5, 7, '#', "red");
 
     //las.printTab();
+    Forest las = Forest(15, 60);
 
-    Forest las = Forest(50, 60);
     Rectangle* p = new Rectangle(5, 7, '*', "green");
     Rectangle* k = new Rectangle(5, '*', "green");
 
-    Border* b = new Border(*p, 1);
+    //Border* b = new Border(*p, 1);
     _Tree* c = new _Tree(5, '*', "red");
 
     las.AddShape(p, 2, 2);
     las.AddShape(k, 7, 20);
-    las.AddShape(b, 3, 40);
+    //las.AddShape(b, 3, 40);
 
     c->setXY(33, 4);
     las += c;
+
+    las.printTab();
 }
