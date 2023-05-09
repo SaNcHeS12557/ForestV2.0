@@ -1,4 +1,6 @@
 #pragma once
+#include <iostream>
+using namespace std;
 #include"Shape.h"
 class Rectangle :public Shape
 {

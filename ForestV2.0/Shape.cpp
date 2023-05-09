@@ -60,7 +60,7 @@ void Shape::Alloc() {
 Shape::~Shape() {
 	int j;
 	counter--;
-	cout << "Destruktor shape: kasuje shape\nZostalo: " << counter << "\n";
+	//cout << "Destruktor shape: kasuje shape\nZostalo: " << counter << "\n";
 	for (j = 0; j < height; j++)
 		delete tab[j];
 	delete tab;

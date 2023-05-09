@@ -69,6 +69,9 @@ void Forest::AddShape(Shape* sh, int y, int x) {
         for (i = 0; i < sh->width; i++) {
             if (sh->tab[j][i] == 1)
                 tab[j + y][i + x] = sh->tab[j][i] * shapes.size();
+            else
+                tab[j + y][i + x] = 0;
         }
+
     }
 }

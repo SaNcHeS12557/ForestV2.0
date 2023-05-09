@@ -14,27 +14,26 @@ using namespace std;
 int Shape::counter = 0; // liczba objektow
 
 int main() {
-    // Add Tree Function - y, x, h-height, s-symbol, c-color)
-    //Forest las;
-    //las.AddTree(3, 3, 5, '*', "green");
-    //las.AddTree(5, 40, 10, '#', "bgreen");
-    //las.AddTree(7, 5, 7, '#', "red");
+    Forest las = Forest(30, 100);
 
-    //las.printTab();
-    Forest las = Forest(15, 60);
+    Rectangle* walls = new Rectangle(5, 14, '*', "green");
+    Rectangle* door = new Rectangle(3, 3, '*', "yellow");
+    _Tree* leaves = new _Tree(5, '*', "green");
+    Rectangle* trunk = new Rectangle(1, 3, '#', "red");
+    Trapeze* roof = new Trapeze(4, '*', "red");
+    Border* window = new Border(3, 3, '#', "red", 1);
 
-    Rectangle* p = new Rectangle(5, 7, '*', "green");
-    Rectangle* k = new Rectangle(5, '*', "green");
+    //las.AddShape(door, 4, 7);
 
-    //Border* b = new Border(*p, 1);
-    _Tree* c = new _Tree(5, '*', "red");
+    roof->setXY(3, 1);
+    las += roof;
+    walls->setXY(6, 5);
+    las += walls;
+    door->setXY(8, 7);
+    las += door;
+    window->setXY(13, 6);
+    las += window;
 
-    las.AddShape(p, 2, 2);
-    las.AddShape(k, 7, 20);
-    //las.AddShape(b, 3, 40);
-
-    c->setXY(33, 4);
-    las += c;
 
     las.printTab();
 }

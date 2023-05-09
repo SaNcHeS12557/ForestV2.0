@@ -1,4 +1,3 @@
-#pragma once
 #include"Rectangle.h"
 class Border :public Rectangle
 {
